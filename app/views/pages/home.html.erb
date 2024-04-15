@@ -1,0 +1,17 @@
+<h1>Pocket size:</h1>
+<h3><%= @articles.count %> articles – <%= @total_time.to_f / 60 %> hours</h3>
+
+<h2>Short articles – <%= @short_articles.length %> articles, <%= @short_articles_time %> minutes</h2>
+<% @short_articles.each do |article| %>
+  <p><%= article.title %> – <%= article.time_to_read %></p>
+<% end %>
+
+<h2>Medium articles – <%= @medium_articles.length %> articles, <%= @medium_articles_time.to_f / 60 %> hours</h2>
+<% @medium_articles.each do |article| %>
+  <p><%= article.title %> – <%= article.time_to_read %></p>
+<% end %>
+
+<h2>Long articles – <%= @long_articles.length %> articles, <%= @long_articles_time.to_f / 60 %> hours</h2>
+<% @long_articles.each do |article| %>
+  <p><%= article.title %> – <%= article.time_to_read %></p>
+<% end %>
